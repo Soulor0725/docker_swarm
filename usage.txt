@@ -1,0 +1,14 @@
+1 docker swarm init
+2 docker stack deploy -c docker-compose.yml getstartedlab
+3 docker service ls
+4 docker service ps getstartedlab_web
+5 docker container ls -q
+
+
+Take down the app and the swarm
+Take the app down with docker stack rm:
+
+docker stack rm getstartedlab
+Take down the swarm.
+
+docker swarm leave --force
